@@ -5,3 +5,7 @@ entorno/
 #Archovos punto pip
 
 .pip
+
+#Cache
+
+_pycache_
