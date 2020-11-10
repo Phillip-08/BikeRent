@@ -23,4 +23,26 @@
     </div>
   </div>
   {% endfor %}
+  <br>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <div class="form-group mb-2">
+                <h1>Recibe nuestras novedades</h1>
+            </div>
+          </div>
+          <div class="col-sm">
+            <form  id="form-nuevousuario" method="POST">     
+                <div class="form-group ">
+                  <label for="idNombreCompleto" class="sr-only">Email</label>
+                  <input type="email" class="form-control" placeholder="Email" id="idNombreCompleto" name="idNombreCompleto" required />
+                </div>
+                
+              </form>
+          </div>
+          <div class="col-sm">
+            <button type="submit" class="btn btn-primary mb-2">Registrar</button>    
+          </div>
+        </div>
+      </div>
 {% endblock %}
