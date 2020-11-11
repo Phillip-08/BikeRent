@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+<div class="row row-cols-1 row-cols-md-3">
   {% for plan in planes %}
   <div class="col mb-3">
     <div class="card h-100">
@@ -23,6 +24,7 @@
     </div>
   </div>
   {% endfor %}
+</div>   
   <br>
       <div class="container">
         <div class="row">
