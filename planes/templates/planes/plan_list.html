@@ -6,13 +6,7 @@
   {% for plan in planes %}
   <div class="col mb-3">
     <div class="card h-100">
-      {% if plan.id == 1 %}
-          <img src="{% static 'img/planBasico.jpeg' %}" class="card-img-top" alt="...">
-      {% elif plan.id == 2 %}
-          <img src="{% static 'img/planrecreativo.jpg' %}" class="card-img-top" alt="...">
-      {% elif plan.id == 3 %}
-          <img src="{% static 'img/PlanWorklife.jpg' %}" class="card-img-top" alt="...">    
-      {% endif %}
+      <img src="{{ plan.imagen.url }}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">{{ plan }} :</h5>
         <p class="card-text">{{ plan.descripcion }}</p>
