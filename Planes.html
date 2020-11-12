@@ -58,7 +58,7 @@
               <p class="card-text">Hecho a medida para tus trayectos cortos y simples, lo que necesitas para tu día a día..</p>
             </div>
             <div class="card-footer bg-transparent">
-                <button class="btn btn-primary  align-content-center ">Comprar</button>
+                <button class="btn btn-primary  align-content-center " data-toggle="modal" data-target="#pagarPlan">Comprar</button>
             </div>
           </div>
         </div>
@@ -70,7 +70,7 @@
               <p class="card-text">Tu pación es salir explorar solo o con tus amigos, sal y divierte compartiendo tu bicicleta, un panorama perfecto para ir a descubrir tu nueva aventura.</p>
             </div>
             <div class="card-footer bg-transparent">
-                <button class="btn btn-primary  align-content-center ">Comprar</button>
+                <button class="btn btn-primary  align-content-center " data-toggle="modal" data-target="#pagarPlan">Comprar</button>
             </div>
           </div>
         </div>
@@ -82,11 +82,78 @@
               <p class="card-text">Aburrido de estar en el taco, con la hora justa a tu reunión, este es tu plan ideal muévete por comunas rápido sin esperar locomoción y llega a tu presentación o tramite a la rapidez de tu pedaleo.</p>
             </div>
             <div class="card-footer bg-transparent">
-                <button class="btn btn-primary  align-content-center ">Comprar</button>
+                <button type="button" class="btn btn-primary  align-content-center " data-toggle="modal" data-target="#pagarPlan">Comprar</button>
             </div>
           </div>
         </div>  
       </div>
+
+      
+
+      <div class="modal fade" id="pagarPlan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Pagar Plan </h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" >
+              <h6>Total a Pagar: </h6>
+              <hr>
+              <h6>Selecciona la forma de pago: </h6>
+              <div class="container-fluid">
+                <div class="row row-cols-1 row-cols-md-2">
+                  <div class="col mb-1">
+                    <p><input type="image" name="botondeenvio" src="img/webpay.jpg" alt="..." class="card-img-top" data-toggle="modal" data-target="#confirmarPago" data-dismiss="modal"></p>
+                  </div>
+                  <div class="col mb-1">
+                    <p><input type="image" name="botondeenvio" src="img/redcompra.jpg" class="card-img-top" alt="..."data-toggle="modal" data-target="#confirmarPago" data-dismiss="modal"></p>
+                  </div>
+                  <div class="col mb-1">
+                    <p><input type="image" name="botondeenvio" src="img/servipag.jpg" class="card-img-top" alt="..."data-toggle="modal" data-target="#confirmarPago" data-dismiss="modal"></p>
+                  </div>
+                  <div class="col mb-1">
+                    <p><input type="image" name="botondeenvio" src="img/santander.jpg" class="card-img-top" alt="..."data-toggle="modal" data-target="#confirmarPago" data-dismiss="modal"></p>
+                  </div>
+                  <div class="col mb-1  ">
+                    <p><input type="image" name="botondeenvio" src="img/bancoestado.jpg" class="card-img-top" alt="..." data-toggle="modal" data-target="#confirmarPago" data-dismiss="modal"></p>
+                  </div>
+                                
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="confirmarPago" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Mensaje Automatico</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p><input type="image" name="exitoso" src="img/pagoExitoso.png" data-dismiss="modal" class="card-img-top" alt="..."></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+
       <hr>
       <div class="container">
         <div class="row">
