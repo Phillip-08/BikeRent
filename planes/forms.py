@@ -5,4 +5,4 @@ class PlanForm(forms.ModelForm):
 
     class Meta:
         model = Plan_Contratado
-        fields = {}
+        fields = {'idPlan'}

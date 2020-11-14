@@ -16,9 +16,9 @@ class Plan(models.Model):
         return self.NombrePlan
     
 class Plan_Contratado(models.Model):
-    idUser = models.IntegerField();
-    idPlan = models.ForeignKey('auth.User', on_delete=models.CASCADE)
+    idUser = models.ForeignKey('auth.User', on_delete=models.CASCADE);
+    idPlan = models.ForeignKey('Plan', on_delete=models.CASCADE);
     fechaPlan = models.DateTimeField(default=timezone.now);
     
     def __str__(self):
-        return self.idUser
+        return self.fechaPlan
