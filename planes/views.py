@@ -3,7 +3,7 @@ from django.http.request import HttpRequest
 from django.shortcuts import redirect, render, get_object_or_404
 from .models import Plan, Plan_Contratado
 from django.utils import timezone
-from .forms import PlanForm
+
 
 from .models import *
 from django.contrib.auth.decorators import login_required
@@ -61,3 +61,12 @@ def logout(request):
 
 def reset(request):
     return render(request, 'password_reset.html')
+
+def contacto(request):
+    return render(request, 'contacto.html')
+
+def nosotros(request):
+    return render(request, 'nosotros.html')
+
+def Mapa(request):
+    return render(request, 'Mapa.html')
