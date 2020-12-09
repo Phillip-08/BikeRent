@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-{% extends 'planes/base.html' %}
-{% load static %}
-
-{% block content %}
-  {% for plan in planes %}
-  <div class="col mb-3">
-    <div class="card h-100">
-      {% if plan.id == 1 %}
-          <img src="{% static 'img/planBasico.jpeg' %}" class="card-img-top" alt="...">
-      {% elif plan.id == 2 %}
-          <img src="{% static 'img/planrecreativo.jpg' %}" class="card-img-top" alt="...">
-      {% elif plan.id == 3 %}
-          <img src="{% static 'img/PlanWorklife.jpg' %}" class="card-img-top" alt="...">    
-      {% endif %}
-=======
 {% extends 'base.html' %}
 {% load static ("planes.css") %]
 {% load static %}
@@ -25,33 +9,24 @@
   <div class="col mb-3">
     <div class="card h-100">
       <img src="{{ plan.imagen.url }}" class="card-img-top" alt="...">
->>>>>>> master
       <div class="card-body">
         <h5 class="card-title">{{ plan }} :</h5>
         <p class="card-text">{{ plan.descripcion }}</p>
       </div>
       <div class="card-footer bg-transparent">
-<<<<<<< HEAD
-          <button class="btn btn-primary  align-content-center ">Comprar </button>
-      </div>
-=======
         <a  class="btn btn-primary" data-toggle="modal" data-target="#pagarPlan">Nose</a> 
         <button class="btn btn-primary  align-content-center " href="{% url 'plan_venta' pk=plan.pk %}" data-toggle="modal" data-target="#pagarPlan"> COMPRAR</BUtton>
           <h2><a href="{% url 'plan_venta' pk=plan.pk %}"> comprar </a></h2>
         </div>
->>>>>>> master
       
     </div>
   </div>
   {% endfor %}
-<<<<<<< HEAD
-=======
 
 
   
 
 </div>   
->>>>>>> master
   <br>
       <div class="container">
         <div class="row">

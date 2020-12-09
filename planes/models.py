@@ -1,26 +1,14 @@
 from django.db import models
 from django.utils import timezone
-<<<<<<< HEAD
-
-# Create your models here.
-
-=======
 from django.core.files.storage import FileSystemStorage
 
 # Create your models here.
 
 fs = FileSystemStorage(location='/media/photos')
->>>>>>> master
 class Plan(models.Model):
     NombrePlan = models.CharField(max_length=30)
     descripcion = models.TextField();
     precio = models.IntegerField();
-<<<<<<< HEAD
-    duracion = models.DateTimeField(default=timezone.now);
-    
-    def __str__(self):
-        return self.NombrePlan
-=======
     fecha = models.DateTimeField(default=timezone.now);
     imagen = models.ImageField(upload_to="planes", null = True)
     
@@ -52,4 +40,3 @@ class registro1(models.Model):
 
     def __str__(self):
         return self.nombre    
->>>>>>> master

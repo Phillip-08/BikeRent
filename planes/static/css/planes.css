@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> master
 *{
     margin: 0;
     padding: 0;
@@ -45,8 +42,6 @@ body {
     color: black;
     text-align: center;
     margin-bottom: 20px;
-<<<<<<< HEAD
-=======
 }´
 
 #pagarPlan .modal-dialog {
@@ -55,5 +50,4 @@ body {
     transform: translate(0,-50%);
     top: 50%;
     margin: 0 auto;
->>>>>>> master
 }

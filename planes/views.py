@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-from django.shortcuts import render
-from .models import Plan
-from django.utils import timezone
-
-=======
 from django.http import request
 from django.http.request import HttpRequest
 from django.shortcuts import redirect, render, get_object_or_404
@@ -16,14 +10,10 @@ from django.contrib.auth.decorators import login_required
 from .forms import CustomUserForm
 from django.contrib.auth import login, authenticate
 
->>>>>>> master
 # Create your views here.
 
 def plan_list(request):
     planes = Plan.objects.all()
-<<<<<<< HEAD
-    return render(request, 'planes/plan_list.html', {'planes': planes})
-=======
     return render(request, 'planes/plan_list.html', {'planes': planes})
 
 def plan_venta(request, pk):
@@ -80,4 +70,3 @@ def nosotros(request):
 
 def Mapa(request):
     return render(request, 'Mapa.html')
->>>>>>> master

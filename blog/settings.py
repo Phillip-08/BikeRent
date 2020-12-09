@@ -42,11 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< HEAD
-    'planes'
-=======
     'planes',
->>>>>>> master
 ]
 
 MIDDLEWARE = [
@@ -128,9 +124,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-<<<<<<< HEAD
-STATIC_ROOT = os.path.join(BASE_DIR, STATIC_URL)
-=======
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/' 
@@ -142,4 +135,3 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'bikemobike.rent8@gmail.com'
 EMAIL_HOST_PASSWORD ='Bike*8*Rent8'
->>>>>>> master
