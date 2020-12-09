@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'planes',
-    'pwa',
 ]
 
 MIDDLEWARE = [
@@ -136,5 +135,3 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'bikemobike.rent8@gmail.com'
 EMAIL_HOST_PASSWORD ='Bike*8*Rent8'
-
-PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'serviceworker.js')

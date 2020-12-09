@@ -24,8 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('planes.urls')),
     path('', RedirectView.as_view(url='planes/', permanent=True)),
-    path('accounts/', include('django.contrib.auth.urls')),
-    path('', include('pwa.url')),
+    path('accounts/', include('django.contrib.auth.urls'))
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
