@@ -1,10 +1,9 @@
-//instalacion y interceptacion
 
 var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
     '/',
-    '/static/core/css/estilos.css',
-    '/static/core/img/logo.png',
+    '/static/img/logoCelesteBici.png',
+    '/static/css/index2.css',
 ];
 
 self.addEventListener('install', function(event) {
@@ -19,15 +18,23 @@ self.addEventListener('install', function(event) {
 });
 
 self.addEventListener('fetch', function(event) {
-    event.respondWith(
-        caches.match(event.request).then(function(response) {
+  event.respondWith(
 
-          return fetch(event.request)
-          .catch(function(rsp) {
-             return response; 
-          });
-          
-          
-        })
-    );
+    fetch(event.request)
+    .then((result)=>{
+      return caches.open(CACHE_NAME)
+      .then(function(c) {
+        c.put(event.request.url, result.clone())
+        return result;
+      })
+      
+    })
+    .catch(function(e){
+        return caches.match(event.request)
+    })
+
+
+   
+  );
 });
+
