@@ -137,4 +137,4 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'bikemobike.rent8@gmail.com'
 EMAIL_HOST_PASSWORD ='Bike*8*Rent8'
 
-PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'serviceworker.js')
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'js','serviceworker.js')
