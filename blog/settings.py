@@ -42,13 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< HEAD
     'planes',
-    'pwa'
-=======
-    'planes',  
+    'pwa',
     'rest_framework',
->>>>>>> jorge
 ]
 
 MIDDLEWARE = [
