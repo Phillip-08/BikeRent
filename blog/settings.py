@@ -26,10 +26,11 @@ SECRET_KEY = 'q2hk(#+mweb3)7+lh9q$30tn)yzkjl&4&)3xp!h)7%@6di9m#9'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'localhost',
-    '127.0.0.1',
-    '.pythonanywhere.com',
+    '*',
 ]
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 
 # Application definition
@@ -41,8 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #'blog.app.PlanesConfig'
-    'planes',
+    'planes',  
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -125,3 +126,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+MEDIA_URL = '/media/' 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+EMAIL_BACKEND= 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'bikemobike.rent8@gmail.com'
+EMAIL_HOST_PASSWORD ='Bike*8*Rent8'
