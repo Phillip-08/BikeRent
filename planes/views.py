@@ -4,11 +4,14 @@ from django.shortcuts import redirect, render, get_object_or_404
 from .models import Plan, Plan_Contratado
 from django.utils import timezone
 
-
 from .models import *
 from django.contrib.auth.decorators import login_required
 from .forms import CustomUserForm
 from django.contrib.auth import login, authenticate
+
+# rest framework
+from rest_framework import viewsets
+from .serializers import Planserielizers
 
 # Create your views here.
 
@@ -70,3 +73,8 @@ def nosotros(request):
 
 def Mapa(request):
     return render(request, 'Mapa.html')
+
+class PlanViewSet(viewsets.ModelViewSet):
+    queryset = Plan.objects.all()
+    serializer_class = Planserielizers
+
