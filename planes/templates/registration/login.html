@@ -23,11 +23,12 @@
                     <a href="registro.html">¿No tienes cuenta?</a>
 
                 </form>
+                <a href="{% url 'social:begin' 'facebook' %}">Iniciar con facebook</a>
             </div>
 
         </div>
-        
-    </div>
+    <div>
+<script src="{% static 'js/validacion.js' %}"></script>
 {% endblock %}
     
     
