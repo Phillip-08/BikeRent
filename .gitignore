@@ -1,0 +1,17 @@
+# No subir carpeta git de librerias
+
+Entorno/
+.vscode/
+pruebaBIke/
+
+#Base de datos
+
+db.sqlite3
+
+#Archovos punto pip
+
+.pip
+
+#Cache
+
+_pycache_
