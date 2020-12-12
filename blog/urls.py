@@ -25,7 +25,7 @@ urlpatterns = [
     path('', include('planes.urls')),
     path('', RedirectView.as_view(url='planes/', permanent=True)),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('oauth/',include('social_django.urls', namespace='social')),
+    path('oauth/', include('social_django.urls', namespace="social")),
     path('', include('pwa.urls')),
 ]
 

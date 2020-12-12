@@ -74,6 +74,9 @@ def nosotros(request):
 def Mapa(request):
     return render(request, 'Mapa.html')
 
+def error_facebook():
+    return render(request, 'login.html')
+
 class PlanViewSet(viewsets.ModelViewSet):
     queryset = Plan.objects.all()
     serializer_class = Planserielizers

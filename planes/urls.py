@@ -5,7 +5,7 @@ from django.conf import settings
 from django.urls import re_path
 from django.conf.urls.static import static
 from rest_framework import routers
-from .views import PlanViewSet
+from .views import PlanViewSet, error_facebook
 
 routers = routers.DefaultRouter()
 routers.register('DetallePlanes', PlanViewSet)
@@ -30,4 +30,5 @@ urlpatterns = [
     path('reset/<uidb64><token>/', auth_views.PasswordResetConfirmView.as_view(), name="password_reset_confirm"),
     path('reset_password_complete/', auth_views.PasswordResetView.as_view(),name="password_reset_complete"),
     path('api/', include(routers.urls)),
+    path('login.html', error_facebook, name='error_facebook'),
 ]

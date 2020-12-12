@@ -35,6 +35,9 @@ LOGOUT_REDIRECT_URL = '/'
 SOCIAL_AUTH_FACEBOOK_KEY = '714735479238436'
 SOCIAL_AUTH_FACEBOOK_SECRET = 'a75f4660762db1bb8a988097f1d36562'
 
+SOCIAL_AUTH_RAISE_EXCEPTIONS = False
+LOGIN_ERROR_URL = '/error-facebook/'
+
 
 # Application definition
 
@@ -75,6 +78,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends', 
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
