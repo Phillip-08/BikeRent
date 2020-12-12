@@ -32,6 +32,9 @@ ALLOWED_HOSTS = [
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
+SOCIAL_AUTH_FACEBOOK_KEY = '714735479238436'
+SOCIAL_AUTH_FACEBOOK_SECRET = 'a75f4660762db1bb8a988097f1d36562'
+
 
 # Application definition
 
@@ -43,8 +46,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'planes',
+    'social_django',
     'pwa',
-    'rest_framework',
+    'rest_framework',   
 ]
 
 MIDDLEWARE = [
@@ -55,6 +59,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'blog.urls'
@@ -62,7 +67,7 @@ ROOT_URLCONF = 'blog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR, 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -73,6 +78,20 @@ TEMPLATES = [
             ],
         },
     },
+]
+
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email', 'user_link'] 
+
+SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {  
+  'fields': 'id, name, email, picture.type(large), link'
+}
+
+
+SOCIAL_AUTH_FACEBOOK_EXTRA_DATA = [               
+    ('name', 'name'),
+    ('email', 'email'),
+    ('picture', 'picture'),
+    ('link', 'profile_url'),
 ]
 
 WSGI_APPLICATION = 'blog.wsgi.application'
@@ -137,5 +156,10 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'bikemobike.rent8@gmail.com'
 EMAIL_HOST_PASSWORD ='Bike*8*Rent8'
+
+AUTHENTICATION_BACKENDS = (
+'social_core.backends.facebook.FacebookOAuth2',
+'django.contrib.auth.backends.ModelBackend',
+)
 
 PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'js','serviceworker.js')

@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-md-12">
         
-                <img class="avatar"src="static/img/logoCelesteBici.png" alt="logo">
+                <img class="avatar"src="{% static 'img/logoCelesteBici.png'%}" alt="logo">
                 <h1>Entre Aquí</h1>
                 <form id="form-nuevousuario" method="POST">
                     {% csrf_token %}
@@ -21,13 +21,15 @@
                     <a href="{% url 'password_reset'%}">¿A perdido su contraseña?</a>
                     <br>
                     <a href="registro.html">¿No tienes cuenta?</a>
-
+                    
                 </form>
+                <a href="{% url 'social:begin' 'facebook' %}">Iniciar con facebook</a>
             </div>
 
         </div>
         
     </div>
+<script src="{% static 'js/validacion.js' %}"></script>
 {% endblock %}
     
     
