@@ -23,7 +23,6 @@ class Plan_Contratado(models.Model):
     def __str__(self):
         return self.fechaPlan
     
-
 class registro1(models.Model):
     nombre = models.CharField(max_length=50)
     apellido = models.CharField(max_length=50)
